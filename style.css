@@ -49,10 +49,15 @@
 input {
   flex: 1;
   border: none;
+  color: rgb(122, 87, 87);
   outline: none;
   background: transparent;
   padding: 10px;
   font-weight: 14px;
+}
+
+::placeholder {
+  color: rgb(165, 150, 150);
 }
 
 .add-item {
