@@ -11,3 +11,26 @@
   background-color: rgb(238, 200, 200);
   padding: 10px;
 }
+
+.todo-app {
+  width:100%;
+  max-width: 600px;
+  background: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 60px;
+  border-radius: 20px;
+}
+
+.todo-app h1 {
+  font-family: "Roboto Flex", sans-serif;
+  color: pink;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.todo-app h1 img {
+  height: 32px;
+  margin-left: 15px;
+}
