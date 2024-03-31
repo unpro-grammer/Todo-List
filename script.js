@@ -35,6 +35,8 @@ function showState() {
 
 showState();
 
+//enable ENTER key to add task in lieu of button-click
+
 var input = document.getElementById("input-box")
 input.addEventListener("keypress", function(v) {
   if (v.key === "Enter") {
