@@ -1,9 +1,7 @@
 const inputBox = document.getElementById("input-box");
 const listWrapper = document.getElementById("list-wrapper");
 function addItem() {
-  if(inputBox.value === "") {
-    alert("The task can't be empty!");
-  } else {
+  if(!(inputBox.value === "")) {
     let li = document.createElement("li");
     li.innerHTML = inputBox.value;
     listWrapper.appendChild(li);
@@ -36,3 +34,11 @@ function showState() {
 }
 
 showState();
+
+var input = document.getElementById("input-box")
+input.addEventListener("keypress", function(v) {
+  if (v.key === "Enter") {
+    v.preventDefault();
+    document.getElementById("add-button").click();
+  }
+});
