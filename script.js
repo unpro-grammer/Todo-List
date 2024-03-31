@@ -13,13 +13,26 @@ function addItem() {
     li.appendChild(span);
   }
   inputBox.value = "";
+  saveState();
 }
 
 listWrapper.addEventListener("click", function(e) {
   if(e.target.tagName === "LI") {
     e.target.classList.toggle("checked");
+    saveState();
 
   } else if (e.target.tagName === "SPAN") {
     e.target.parentElement.remove();
+    saveState();
   }
 }, false);
+
+function saveState() {
+  localStorage.setItem("state", listWrapper.innerHTML);
+}
+
+function showState() {
+  listWrapper.innerHTML = localStorage.getItem("state");
+}
+
+showState();
