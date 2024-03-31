@@ -4,3 +4,10 @@
   /* font-family: */
   box-sizing: border-box;
 }
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(238, 200, 200);
+  padding: 10px;
+}
