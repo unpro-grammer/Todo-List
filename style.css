@@ -3,6 +3,8 @@
   padding: 0;
   /* font-family: */
   box-sizing: border-box;
+  font-family: "Roboto Flex", sans-serif;
+  
 }
 
 .container {
@@ -22,8 +24,7 @@
 }
 
 .todo-app h1 {
-  font-family: "Roboto Flex", sans-serif;
-  color: pink;
+  color: rgb(248, 181, 192);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -33,4 +34,78 @@
 .todo-app h1 img {
   height: 32px;
   margin-left: 15px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(248, 242, 242);
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+.add-item {
+  border: none;
+  outline: none;
+  padding: 15px 50px;
+  background: rgb(240, 192, 130);
+  color: white;
+  font-size: 16px;
+  border-radius: 4cap;
+  transition: opacity 0.15s;
+  cursor: pointer;
+}
+
+.add-item:hover {
+  opacity: 0.75;
+}
+
+.add-item:active {
+  opacity: 0.55;
+}
+
+ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  
+  background-image: url(images/ring.jpg);
+  background-size: cover;
+  background-position: center;
+  
+  top: 8px;
+  left: 8px;
+
+}
+
+ul li.checked {
+  color: rgb(165, 150, 150);
+  text-decoration: line-through;
+
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.jpg);
 }
